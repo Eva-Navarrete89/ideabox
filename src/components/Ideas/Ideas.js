@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 
 import "./Ideas.css";
 
-const Ideas = ({ ideas }) => {
+const Ideas = ({ ideas, deleteIdea }) => {
   // we pass down data to the children by using props.
   // But we destructured props and are using the property name which we gave the component in the the parent compent (APP)
   // We use map within our Ideas child component (Card) to return an array of the same length with the properties/data we want to display
@@ -15,6 +15,7 @@ const Ideas = ({ ideas }) => {
         description={idea.description}
         id={idea.id}
         key={idea.id}
+        deleteIdea={deleteIdea}
       />
     );
   });
